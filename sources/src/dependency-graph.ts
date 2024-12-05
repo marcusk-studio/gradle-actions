@@ -125,7 +125,7 @@ async function downloadDependencyGraphs(config: DependencyGraphConfig): Promise<
 
     let dependencyGraphArtifacts = (
         await artifactClient.listArtifacts({
-            latest: true,
+            latest: false,
             findBy
         })
     ).artifacts.filter(artifact => artifact.name.startsWith(DEPENDENCY_GRAPH_PREFIX))
